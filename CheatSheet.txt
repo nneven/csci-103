@@ -1,0 +1,45 @@
+// Data Types (type, name, value, size)			// Mathematical Operations
+int x = 1 		 (size 4)						pow(x, y); // x ^ y
+char c = 'N';    (size 1)						sqrt(x);   // square root
+double y = 3.14; (size 8)						abs(x);    // absolute value
+bool b = true;   (size 1)						sin(x);    // x in radians
+
+// Ternary Operator
+(condition) ? expression if true : expression if false
+
+// Loops
+initialization > conditional > body > update
+break;    // jump out of loops, no conditions checked or updates run
+continue; // jump to top of loop, check condition and runs update
+
+// Random Numbers [a, b]
+int r = rand() % (b - a + 1) + a;
+
+// Functions
+formal paramaters > define
+actual paramaters > called
+pass by value
+C/C++ compilers are single-pass, top-to-bottom
+
+// Arrays - statically sized, contagiously allocated
+//		    collections of homogenious data elements
+x[i][j] = (start address) + ((i * numC) + j) * sizeof(type)
+x[p][i][j] = (star) + (p * numR * numC + i * numC + j) * sizeof(type)
+
+// Pointers (variable)
+int n = 1;
+int* p = &n;  	// p set to address of n
+*p = 2;      	// n is now 2
+int dat[5] = { 0, 1, 2, 3, 4 }; // dat = address
+p = dat;   		// p points to start of dat
+p[0] = 5;       // dat[0] is now 5
+*(p + 1) = 6;   // dat[1] is now 6
+*(dat + 2) = 7; // dat[2] is now 7
+p++;		 	// p points to dat[1]
+
+// C Strings
+int strlen(char *dest);
+int strcmp(char *s1, char *s2);		 // return 0 if equal
+char* strcpy(char *dest, char *src); // copy src to dest
+char* strcat(char *dest, char *stc); // concatenate src onto dest
+char* strchr(char *str, char c);	 // return a pointer to the first occurence
